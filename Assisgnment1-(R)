@@ -1,0 +1,18 @@
+# Consider the datasets Sunspots and strikes from itsmr library.
+# Plot the ACF and PACF for both datasets.
+
+library(itsmr)
+
+data("sunspots")
+data('strikes')
+
+
+ts_sn <- sunspots
+
+par(mfrow=c(2,2))
+
+acf(ts_sn,main='Sunspots-acf')
+pacf(ts_sn,main='Sunspots-pacf')
+
+acf(ts_str,main='stirkes-acf')
+pacf(ts_str,main='strikes-pacf')
